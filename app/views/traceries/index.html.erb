@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="max-w-4xl mx-auto">
+
+<div class="grid grid-cols-1 py-4">
+  <div class="py-4 content-center">
+    <p center class="text-center font-extrabold text-xl">Search Traceries</p>
+  </div>
+
+  <div class="text-center">
+  <%= form_with(url: root_path, method: "GET") do |form| %>
+    <%= form.label :query, "Search by name:" %>
+    <%= form.text_field :query, class: "shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    <%= form.submit 'Search', name: nil, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline" %>
+  <% end %>
+  </div>
+</div>
+
+  <div class="shadow overflow-hidden rounded border-b border-gray-200">
+    <div class="grid grid-cols-3 gap-3 bg-gray-800 text-white p-2"> <!-- table -->
+      <div>Tracery Name</div>
+      <div>Color</div>
+      <div>LI id</div>
+    </div>
+        <% @traceries.each do |tracery| %>
+          <%= render tracery %>
+        <% end %>
+  </div>
+</div>
