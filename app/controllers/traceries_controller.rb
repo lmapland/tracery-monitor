@@ -1,9 +1,9 @@
 class TraceriesController < ApplicationController
   def index
     if params[:query].present?
-      @traceries = Tracery.where("name LIKE ?", "%#{params[:query]}%")
+      @traceries = Tracery.where("name LIKE ?", "%#{params[:query]}%").includes(legendary: :character).includes(:tracery_color)
     else
-      @traceries = Tracery.all
+      @traceries = Tracery.all.includes(legendary: :character).includes(:tracery_color)
     end
   end
 

@@ -2,12 +2,12 @@
 
 Using Ruby 3 and Rails 7
 
-To create this app I used
+To create this app I used  
 rails new tracery-monitor --skip-javascript --skip-webpack-install --skip-turbolinks
 
-The models for the data are pretty simple:
-A character has many LIs (legendaries)
-A legendary has many traceries
+The models for the data are pretty simple:  
+A character has many LIs (legendaries)  
+A legendary has many traceries  
 A tracery has one traceryColor
 
 I'm using a basic sqlite3 database; no setup required.
