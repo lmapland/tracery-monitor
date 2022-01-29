@@ -8,6 +8,6 @@ class TraceriesController < ApplicationController
   end
 
   def all
-    @characters = Character.all.eager_load(:legendaries)
+    @characters = Character.all.includes(legendaries: { traceries: :tracery_color } )
   end
 end

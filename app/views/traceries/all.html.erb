@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="max-w-4xl mx-auto">
+
+<div class="grid grid-cols-1 pt-8 pb-4">
+  <div class="pb-4 content-center">
+    <p center class="text-center font-extrabold text-2xl">All Traceries</p>
+  </div>
+
+  <div class="text-center pb-4"><%= link_to "Search Traceries", root_path, class: "text-cyan-600" %></div>
+
+</div>
+
+<div class="max-w-5xl mx-auto">
+  <% if @characters.count > 0 %>
+  <% @characters.each do |c| %>
+    <p class="text-center font-extrabold text-xl p-4"><%= c.name %></p><!-- Style this better -->
+    <div class="grid grid-cols-2 gap-4">
+    <% c.legendaries.each do |li| %>
+      <div>
+      <div class="bg-gray-800 text-white p-2">
+        <%= li.name %>: <%= li.li_type %> (Rank <%= li.rank %>)
+      </div>
+      <% li.traceries.each do |t| %>
+        <div style="background-color: #<%= t.tracery_color.hex %>" class="pl-4 py-1">
+          <%= t.name %>
+        </div>
+      <% end %>
+      </div>
+    <% end %>
+    </div>
+  <% end %>
+  <% end %>
+</div>
