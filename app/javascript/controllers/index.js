@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
+import FormSubmissionController from "./form_submission_controller.js"
+application.register("form-submission", FormSubmissionController)
+
+import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)

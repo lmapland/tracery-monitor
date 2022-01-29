@@ -1,3 +1,0 @@
-<%= turbo_frame_tag "tracery" do %>
-  <%= render players %>
-<% end %>

@@ -8,9 +8,9 @@
   </div>
 
   <div class="text-center">
-  <%= form_with(url: root_path, method: "GET") do |form| %>
+  <%= form_with(url: root_path, method: "GET", data: { controller: "form-submission", turbo_frame: "traceries" }) do |form| %>
     <%= form.label :query, "Search by name:" %>
-    <%= form.text_field :query, class: "shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    <%= form.text_field :query, data: { action: "input->form-submission#search" }, class: "shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
     <%= form.submit 'Search', name: nil, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline" %>
   <% end %>
   </div>
@@ -22,8 +22,6 @@
       <div>LI Name</div>
       <div>Tracery Name</div>
     </div>
-        <% @traceries.each do |tracery| %>
-          <%= render tracery %>
-        <% end %>
+    <%= render "traceries", traceries: @traceries %>
   </div>
 </div>
