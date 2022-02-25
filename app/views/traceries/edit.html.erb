@@ -1,0 +1,8 @@
+<%#= turbo_frame_tag 'tracery_edit_modal' do %>
+<%= turbo_frame_tag 'traceries_modal' do %>
+  <turbo-stream target="tracery_edit_form" action="replace">
+    <template>
+      <%= render partial: "form", locals: { tracery: @tracery } %>
+    </template>
+  </turbo-stream>
+<% end %>

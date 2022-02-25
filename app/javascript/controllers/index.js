@@ -9,3 +9,6 @@ application.register("form-submission", FormSubmissionController)
 
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
+
+import { Modal } from "tailwindcss-stimulus-components"
+application.register('modal', Modal)

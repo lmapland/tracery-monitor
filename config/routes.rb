@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'traceries#index'
-  get '/tracery/all', to: 'traceries#all'
+  get '/traceries/all',      to: 'traceries#all'
+  get '/traceries/:id/edit', to: 'traceries#edit',  as: 'edit_traceries'
+  put '/traceries/:id',      to: 'traceries#update'
 end

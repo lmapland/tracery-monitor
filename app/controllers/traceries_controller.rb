@@ -10,4 +10,15 @@ class TraceriesController < ApplicationController
   def all
     @characters = Character.all.includes(legendaries: { traceries: :tracery_color } )
   end
+
+  def edit
+    @tracery = Tracery.find(params[:id])
+  end
+
+  def update
+    @tracery = Tracery.find(params[:id])
+    @tracery.update(
+      name: params[:name]
+    )
+  end
 end

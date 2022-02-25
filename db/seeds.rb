@@ -18,8 +18,6 @@ Character.create(name: "Tovoria", rank: 4)
 Character.create(name: "Tovyrwen", rank: 5)
 
 Legendary.create(character_id: 1, name: "Yellow Dagger", li_type: "Weapon", rank: 1)
-Legendary.create(character_id: 1, name: "Tools", li_type: "Class", rank: 2)
-Legendary.create(character_id: 1, name: "Red Dagger", li_type: "Weapon", rank: 3)
 
 Tracery.create(legendary_id: 1, tracery_color_id: 4, level: 470, tracery_type: "heraldric", name: "Heraldry of the Sparrow")
 Tracery.create(legendary_id: 1, tracery_color_id: 4, level: 470, tracery_type: "power", name: "Area Effect Attack Damage")
@@ -33,6 +31,7 @@ Tracery.create(legendary_id: 1, tracery_color_id: 4, level: 470, tracery_type: "
 Tracery.create(legendary_id: 1, tracery_color_id: 4, level: 470, tracery_type: "craft", name: "Ascendent Lightning")
 Tracery.create(legendary_id: 1, tracery_color_id: 3, level: 470, tracery_type: "craft", name: "Ascendent Lightning")
 
+Legendary.create(character_id: 1, name: "Tools", li_type: "Class", rank: 2)
 Tracery.create(legendary_id: 2, tracery_color_id: 4, level: 470, tracery_type: "heraldric", name: "Heraldry of the Sparrow")
 Tracery.create(legendary_id: 2, tracery_color_id: 4, level: 470, tracery_type: "power", name: "Single Target Attack Criticals")
 Tracery.create(legendary_id: 2, tracery_color_id: 4, level: 470, tracery_type: "power", name: "Base Morale Multiplier")
@@ -46,7 +45,7 @@ Tracery.create(legendary_id: 2, tracery_color_id: 4, level: 470, tracery_type: "
 Tracery.create(legendary_id: 2, tracery_color_id: 4, level: 470, tracery_type: "craft", name: "Ascendent Lightning")
 Tracery.create(legendary_id: 2, tracery_color_id: 3, level: 470, tracery_type: "craft", name: "Ascendent Lightning")
 
-
+Legendary.create(character_id: 1, name: "Red Dagger", li_type: "Weapon", rank: 3)
 Tracery.create(legendary_id: 3, tracery_color_id: 3, level: 470, tracery_type: "heraldric", name: "Heraldry of the Sparrow")
 Tracery.create(legendary_id: 3, tracery_color_id: 3, level: 470, tracery_type: "power", name: "Area Effect Attack Damage")
 Tracery.create(legendary_id: 3, tracery_color_id: 3, level: 470, tracery_type: "power", name: "Area Effect Attack Criticals")
@@ -59,3 +58,5 @@ Tracery.create(legendary_id: 3, tracery_color_id: 4, level: 470, tracery_type: "
 Tracery.create(legendary_id: 3, tracery_color_id: 4, level: 470, tracery_type: "craft", name: "Ascendent Lightning")
 Tracery.create(legendary_id: 3, tracery_color_id: 3, level: 470, tracery_type: "craft", name: "Ascendent Lightning")
 
+Legendary.create(character_id: 1, name: "Red Dagger", li_type: "Weapon", rank: 3)
+Tracery.create(legendary_id: 3, tracery_color_id: 3, level: 470, tracery_type: "heraldric", name: "Heraldry of the Sparrow")

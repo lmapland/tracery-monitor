@@ -1,0 +1,14 @@
+<div>
+  <div>
+  <%# form_with model: @tracery, url: tracery_path(@tracery), method: :patch do |f| %>
+  <%= form_with(model: @tracery, url: traceries_all_path, id: "tracery_edit_form", data: { extended_modal_target: 'form' }) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <br>
+    <%= form.submit %>
+    <button data-action="click->extended-modal#close">
+    Cancel
+    </button>
+  <% end %>
+  </div>
+</div>
