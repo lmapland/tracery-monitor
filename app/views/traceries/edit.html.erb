@@ -1,0 +1,36 @@
+<div class="max-w-4xl mx-auto">
+<div class="grid grid-cols-1 pt-8 pb-4">
+  <div class="pb-4 content-center">
+    <p center class="text-center font-extrabold text-xl pb-4">Edit Tracery</p>
+
+  <div class="text-center pb-4">
+  <%= form_with model: @tracery, url: traceries_update_path(@tracery), method: :patch do |f| %>
+      <div class="grid grid-cols-2">
+      <div class="pb-4"><p class="text-right pr-3">
+      <%= f.label :name, "Name:" %></p></div>
+      <div class="pb-4"><p class="text-left"><%= f.text_field :name, class: "pl-2 p-1 shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %></p></div>
+
+      
+      <div class="pb-4"><p class="text-right pr-3"><%= f.label :tracery_color, "Tracery Color:" %></p></div>
+      <div class="pb-4"><p class="text-left">
+        <%= f.select :tracery_color_id, @tracery_colors.map {|c| [c.name, c.id] }, {}, id: "tracery_color_id", class: "pl-2 p-1 shadow border rounded text-gray-700 focus:outline-none focus:shadow-outline" %>
+      <%#= f.text_field :tracery_color, class: "pl-2 p-1 shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %></p></div>
+
+      <div class="pb-4"><p class="text-right pr-3"><%= f.label :level, "Level:" %></p></div>
+      <div class="pb-4"><p class="text-left">
+      <%= f.text_field :level, class: "pl-2 p-1 shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      </div>
+
+      <div class="pb-4"><p class="text-right pr-3"><%= f.label :tracery_type, "Tracery Type:" %></p></div>
+      <div class="pb-4"><p class="text-left">
+      <%= f.text_field :tracery_type, class: "pl-2 p-1 shadow appearance-none border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %></p></div>
+      </div>
+
+      <div class="pb-4">
+      <%= f.submit "Update", class: "bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline" %>
+      </div>
+  <% end %>
+  </div>
+  </div>
+</div>
+</div>

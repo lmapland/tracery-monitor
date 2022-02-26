@@ -1,8 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
 <div class="max-w-4xl mx-auto">
 
 <div class="grid grid-cols-1 pt-8 pb-4">
+<p style="color: green" class="text-center pb-4"><%= notice %></p>
   <div class="pb-4 content-center">
     <p center class="text-center font-extrabold text-2xl">All Traceries</p>
   </div>
@@ -22,8 +21,9 @@
         <%= li.name %>: <%= li.li_type %> (Rank <%= li.rank %>)
       </div>
       <% li.traceries.each do |t| %>
-        <div style="background-color: #<%= t.tracery_color.hex %>" class="pl-4 py-1">
+        <div style="background-color: #<%= t.tracery_color.hex %>" class="pl-4 pr-4 py-1">
           <%= t.name %>
+          <span class="float-right"><%= link_to "edit", traceries_edit_path(t), class: "text-cyan-600" %></span>
         </div>
       <% end %>
       </div>
